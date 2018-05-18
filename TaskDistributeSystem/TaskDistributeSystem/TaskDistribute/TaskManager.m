@@ -83,6 +83,7 @@ typedef void(^ExecuteTaskBlock)(BOOL successed);
             self.executingTaskCount += 1;
             toBeSendedTask.isExecuting = YES;
             [self executeTask:toBeSendedTask completed:^(BOOL successed) {
+//                [self.lock lock];
                 [self.tasks removeObject:toBeSendedTask];
                 if (!successed) {
                     if (toBeSendedTask.resendTimes <= maxResendTimes && !toBeSendedTask.isCanceled) {
@@ -91,6 +92,7 @@ typedef void(^ExecuteTaskBlock)(BOOL successed);
                         [self.tasks addObject:toBeSendedTask];
                     }
                 }
+//                [self.lock unlock];
             }];
         }
         [self.lock unlock];
@@ -112,7 +114,9 @@ typedef void(^ExecuteTaskBlock)(BOOL successed);
                 task = tmpTask;
             }
         }
-        return task;
+        if (!task.isExecuting) {
+            return task;
+        }
     }
     return nil;
 }

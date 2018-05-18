@@ -47,10 +47,12 @@
     }
     [self.tasks removeAllObjects];
     for (int i = 0; i < 3; i++) {
-        Task *task = [[Task alloc] initWithTaskId:[NSString stringWithFormat:@"%i", i]];
-        task.weight = (arc4random() % 10) + 1;
-        [[TaskManager sharedTaskManager] sendTask:task];
-        [self.tasks addObject:task];
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            Task *task = [[Task alloc] initWithTaskId:[NSString stringWithFormat:@"%i", i]];
+            task.weight = (arc4random() % 10) + 1;
+            [[TaskManager sharedTaskManager] sendTask:task];
+            [self.tasks addObject:task];
+        });
     }
 }
 
