@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5oO-Ez-iU8"/>
+                        <viewControllerLayoutGuide type="bottom" id="z1U-r7-BQ0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="GkS-nW-LdO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最大并发任务数量:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Tm-1n-z90">
+                                        <rect key="frame" x="20" y="130" width="143.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最大重发次数:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1AW-Sf-zzX">
+                                        <rect key="frame" x="20" y="171" width="109" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JFe-xp-K3w">
+                                        <rect key="frame" x="173.5" y="125.5" width="181.5" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7XL-tv-rta">
+                                        <rect key="frame" x="174" y="166" width="181" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IjU-Iz-DFY">
+                                        <rect key="frame" x="20" y="263" width="152.5" height="40"/>
+                                        <color key="backgroundColor" red="0.074509803920000006" green="0.73725490199999999" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1mK-Tp-3Wl"/>
+                                        </constraints>
+                                        <state key="normal" title="发送任务">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oad-oc-RSD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rop-az-kWe">
+                                        <rect key="frame" x="202.5" y="263" width="152.5" height="40"/>
+                                        <color key="backgroundColor" red="0.074509803920000006" green="0.73725490199999999" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="移除任务">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="removeTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q9c-zP-Ubk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2Tm-1n-z90" firstAttribute="top" secondItem="GkS-nW-LdO" secondAttribute="top" constant="130" id="0iY-et-8cP"/>
+                                    <constraint firstItem="1AW-Sf-zzX" firstAttribute="leading" secondItem="2Tm-1n-z90" secondAttribute="leading" id="1SZ-ae-ivM"/>
+                                    <constraint firstItem="rop-az-kWe" firstAttribute="width" secondItem="IjU-Iz-DFY" secondAttribute="width" id="1ZR-fi-CLE"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Tm-1n-z90" secondAttribute="trailing" constant="211.5" id="66a-Zc-3CT"/>
+                                    <constraint firstItem="rop-az-kWe" firstAttribute="leading" secondItem="IjU-Iz-DFY" secondAttribute="trailing" constant="30" id="7vU-qm-HUR"/>
+                                    <constraint firstItem="1AW-Sf-zzX" firstAttribute="top" secondItem="2Tm-1n-z90" secondAttribute="bottom" constant="20" id="ADQ-Si-6JQ"/>
+                                    <constraint firstItem="JFe-xp-K3w" firstAttribute="leading" secondItem="2Tm-1n-z90" secondAttribute="trailing" constant="10" id="KG6-Bw-myS"/>
+                                    <constraint firstAttribute="trailing" secondItem="rop-az-kWe" secondAttribute="trailing" constant="20" id="M2q-q9-Rwf"/>
+                                    <constraint firstItem="2Tm-1n-z90" firstAttribute="leading" secondItem="GkS-nW-LdO" secondAttribute="leading" constant="20" id="V98-AQ-PCx"/>
+                                    <constraint firstItem="rop-az-kWe" firstAttribute="centerY" secondItem="IjU-Iz-DFY" secondAttribute="centerY" id="WLO-xE-TjC"/>
+                                    <constraint firstAttribute="bottom" secondItem="2Tm-1n-z90" secondAttribute="bottom" constant="600" id="WMh-1V-VWW"/>
+                                    <constraint firstItem="rop-az-kWe" firstAttribute="height" secondItem="IjU-Iz-DFY" secondAttribute="height" id="WYR-8d-27x"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1AW-Sf-zzX" secondAttribute="trailing" constant="20" symbolic="YES" id="b70-Lg-fXk"/>
+                                    <constraint firstItem="IjU-Iz-DFY" firstAttribute="top" secondItem="1AW-Sf-zzX" secondAttribute="bottom" constant="71" id="eMC-gl-y9Y"/>
+                                    <constraint firstItem="JFe-xp-K3w" firstAttribute="centerY" secondItem="2Tm-1n-z90" secondAttribute="centerY" id="ecd-od-h35"/>
+                                    <constraint firstItem="7XL-tv-rta" firstAttribute="trailing" secondItem="JFe-xp-K3w" secondAttribute="trailing" id="fcl-a5-6bs"/>
+                                    <constraint firstItem="IjU-Iz-DFY" firstAttribute="leading" secondItem="GkS-nW-LdO" secondAttribute="leading" constant="20" id="th0-ZX-zfn"/>
+                                    <constraint firstItem="7XL-tv-rta" firstAttribute="leading" secondItem="JFe-xp-K3w" secondAttribute="leading" id="ua0-zG-NA3"/>
+                                    <constraint firstItem="7XL-tv-rta" firstAttribute="centerY" secondItem="1AW-Sf-zzX" secondAttribute="centerY" id="wJ4-fd-UpB"/>
+                                    <constraint firstAttribute="trailing" secondItem="JFe-xp-K3w" secondAttribute="trailing" constant="20" id="wsL-4M-OXZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GkS-nW-LdO" firstAttribute="top" secondItem="5oO-Ez-iU8" secondAttribute="bottom" id="7le-Ij-cBc"/>
+                            <constraint firstItem="GkS-nW-LdO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8ud-00-a7A"/>
+                            <constraint firstItem="z1U-r7-BQ0" firstAttribute="top" secondItem="GkS-nW-LdO" secondAttribute="bottom" id="KdA-3T-w7T"/>
+                            <constraint firstAttribute="trailing" secondItem="GkS-nW-LdO" secondAttribute="trailing" id="eF1-QE-i0k"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="maxConcurrencyTaskCountTF" destination="JFe-xp-K3w" id="e6f-48-E68"/>
+                        <outlet property="maxResendTimesTF" destination="7XL-tv-rta" id="57Z-1H-OQT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
